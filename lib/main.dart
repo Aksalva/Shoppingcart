@@ -1,5 +1,7 @@
 import 'package:first/pages/home_page.dart';
 import 'package:first/pages/login_page.dart';
+import 'package:first/pages/wlcm_page.dart';
+import 'package:first/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,13 +16,14 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.light,
         theme: ThemeData(
             primarySwatch: Colors.purple,
-            fontFamily: GoogleFonts.ubuntu().fontFamily),
+            fontFamily: GoogleFonts.pacifico().fontFamily),
         darkTheme: ThemeData(brightness: Brightness.dark),
-        initialRoute: '/login',
+        initialRoute: '/home',
         routes: {
           "/": (context) => HomePage(),
-          "/home": (context) => HomePage(),
-          "/login": (context) => LoginPage(),
+          MyRoutes.homeRoute: (context) => HomePage(),
+          MyRoutes.loginRoute: (context) => LoginPage(),
+          MyRoutes.wlcmRoute: (context) => WlcmPage(),
         });
   }
 }

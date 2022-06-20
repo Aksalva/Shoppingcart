@@ -1,4 +1,5 @@
 import 'package:first/pages/login_page.dart';
+import 'package:first/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
       ),
       drawer: Drawer(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
+        onPressed: () => {Navigator.pushNamed(context, MyRoutes.loginRoute)},
       ),
     );
   }
