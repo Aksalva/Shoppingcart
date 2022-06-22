@@ -2,6 +2,8 @@ import 'package:first/pages/login_page.dart';
 import 'package:first/utils/routes.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/mnpgdrawer.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: Drawer(),
+      drawer: MainDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {Navigator.pushNamed(context, MyRoutes.loginRoute)},
       ),
