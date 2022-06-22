@@ -1,7 +1,6 @@
-import 'package:first/widgets/drawer.dart';
+import 'package:first/widgets/wlcmdrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:first/utils/routes.dart';
-import '../widgets/drawer.dart';
 
 class WlcmPage extends StatelessWidget {
   @override
@@ -19,9 +18,10 @@ class WlcmPage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: MyDrawer(),
+      drawer: WlcmDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
+        backgroundColor: Color(0xFF191CD2),
       ),
     );
   }

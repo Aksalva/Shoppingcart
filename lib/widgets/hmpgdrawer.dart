@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MainDrawer extends StatelessWidget {
-  const MainDrawer({Key? key}) : super(key: key);
+class HmpgDrawer extends StatelessWidget {
+  const HmpgDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,14 +10,14 @@ class MainDrawer extends StatelessWidget {
         'https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png';
     return Drawer(
       child: Container(
-        color: Colors.purple[200],
+        color: Colors.white,
         child: ListView(
           children: [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                decoration: BoxDecoration(color: Colors.purple[500]),
+                decoration: BoxDecoration(color: Color(0xFF191CD2)),
                 accountName: Text('EXAMPLE'),
                 accountEmail: Text('example@abc.com'),
                 currentAccountPicture: CircleAvatar(
@@ -28,34 +28,34 @@ class MainDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(
                 CupertinoIcons.home,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "List Element 1",
                 textScaleFactor: 1.4,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.phone,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "List Element 2",
                 textScaleFactor: 1.4,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
               ),
             ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.info,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "List Element 3",
                 textScaleFactor: 1.4,
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.black),
               ),
             ),
           ],

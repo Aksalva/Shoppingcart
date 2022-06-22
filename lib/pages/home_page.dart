@@ -1,15 +1,16 @@
 import 'package:first/pages/login_page.dart';
 import 'package:first/utils/routes.dart';
+import 'package:first/widgets/hmpgdrawer.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/mnpgdrawer.dart';
+import '../widgets/hmpgdrawer.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("MyApp"),
+        title: Text("Home Page"),
       ),
       body: Center(
         child: Column(
@@ -22,9 +23,10 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: MainDrawer(),
+      drawer: HmpgDrawer(),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {Navigator.pushNamed(context, MyRoutes.loginRoute)},
+        backgroundColor: Color(0xFF191CD2),
       ),
     );
   }
