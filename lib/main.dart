@@ -1,10 +1,11 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:first/pages/home_page.dart';
 import 'package:first/pages/login_page.dart';
 import 'package:first/pages/wlcm_page.dart';
 import 'package:first/utils/routes.dart';
 import 'package:first/widgets/theme.dart';
 import 'package:flutter/material.dart';
-
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           "/": (context) => WlcmPage(),
-          MyRoutes.homeRoute: (context) => HomePage(),
+          MyRoutes.homeRoute: (context) => const HomePage(),
           MyRoutes.loginRoute: (context) => LoginPage(),
           MyRoutes.wlcmRoute: (context) => WlcmPage(),
         });

@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
+
 import 'package:first/models/catalog.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +15,15 @@ class ItemWidget extends StatelessWidget {
       child: Card(
         elevation: 3.0,
         child: ListTile(
-          onTap: () => {print("${item.name} pressed")},
-          leading: Image.network(item.image),
+          onTap: () => {},
+          leading: ConstrainedBox(
+            constraints: BoxConstraints(
+                maxWidth: 44, maxHeight: 44, minHeight: 44, minWidth: 44),
+            child: Image.network(
+              item.image,
+              fit: BoxFit.cover,
+            ),
+          ),
           title: Text(item.name),
           subtitle: Text(item.desc),
           trailing: Text(
