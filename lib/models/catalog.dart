@@ -1,15 +1,5 @@
 class CatalogModel {
-  static List<Item> items = [
-    /*Item(
-        id: 1,
-        name: "Samsung Galaxy S22 Ultra",
-        desc: "Samsung 2022 Flagship Phone",
-        price: 1099,
-        color: "black",
-        image:
-            "https://static.toiimg.com/thumb/resizemode-4,msid-89473684,imgsize-200,width-1200/89473684.jpg")
-  */
-  ];
+  static List<Item> items = [];
 }
 
 class Item {

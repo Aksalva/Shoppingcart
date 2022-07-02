@@ -14,7 +14,7 @@
       "desc": "Apple 2022 Flagship Phone",
       "price": 1099,
       "color": "white",
-      "image": "https://m.media-amazon.com/images/I/61D84NtVgVL.jpg"
+      "image": "https://fscl01.fonpit.de/devices/20/2020.png"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "desc": "Nvidia Top of the Line Graphics Card",
       "price": 2999,
       "color": "black",
-      "image": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/RTX_3090_Ti_Render78.jpg"
+      "image": "https://cdn.wccftech.com/wp-content/uploads/2022/03/Untitled-1.png"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "desc": "Nvidia Best Gaming Graphics Card",
       "price": 1399,
       "color": "black",
-      "image": "https://cdn.vox-cdn.com/thumbor/XZLMrMkkwjoc4vaHdmDT-Qy2f9c=/0x0:2040x1360/1200x675/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/69376585/twarren_20210601_4611_0001.0.jpg"
+      "image": "https://www.notebookcheck.net/fileadmin/Notebooks/NVIDIA/GeForce_RTX_3080_Ti_Founders_Edition/Ampere_3080Ti_Back_1.png"
     },
     {
       "id": 5,

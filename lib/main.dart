@@ -1,5 +1,6 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
+import 'package:first/pages/cart_page.dart';
 import 'package:first/pages/home_page.dart';
 import 'package:first/pages/login_page.dart';
 import 'package:first/pages/wlcm_page.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.system,
         theme: MyTheme.lightTheme(context),
         darkTheme: MyTheme.darkTheme(context),
         initialRoute: '/',
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
           MyRoutes.homeRoute: (context) => const HomePage(),
           MyRoutes.loginRoute: (context) => LoginPage(),
           MyRoutes.wlcmRoute: (context) => WlcmPage(),
+          MyRoutes.cartRoute: (context) => CartPage(),
         });
   }
 }
