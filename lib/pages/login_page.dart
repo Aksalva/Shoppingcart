@@ -1,6 +1,7 @@
-// ignore_for_file: use_key_in_widget_constructors,
+// ignore_for_file: use_key_in_widget_constructors,, prefer_const_constructors
 
 import 'package:first/utils/routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -31,8 +32,15 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text("Login Page"),
-        ),
+            title: const Text(
+              "Login Page",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            backgroundColor: Colors.transparent,
+            leading: IconButton(
+              onPressed: () => Navigator.pop(context),
+              icon: Icon(CupertinoIcons.back),
+            )),
         body: SingleChildScrollView(
           keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
           child: Center(

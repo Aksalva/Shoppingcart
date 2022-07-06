@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_null_comparison, prefer_const_constructors
 
 import 'package:first/models/catalog.dart';
+import 'package:first/widgets/home_widgets/add_to_cart.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -29,15 +30,8 @@ class DetailPage extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.fromLTRB(0, 0, 16, 0),
           children: [
-            "\$${catalog.price}".text.bold.xl3.make().px8(),
-            ElevatedButton(
-              onPressed: () => {},
-              child: "Add To Cart".text.make(),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(context.cardColor),
-                shape: MaterialStateProperty.all(StadiumBorder()),
-              ),
-            ).wh(130, 50)
+            "\$${catalog.price}".text.bold.xl4.make().px8(),
+            AddToCart(catalog: catalog).wh(130, 50)
           ],
         ).p16(),
       ),

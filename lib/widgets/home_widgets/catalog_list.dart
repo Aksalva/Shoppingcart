@@ -1,10 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: prefer_const_constructors
 
+import 'package:first/widgets/home_widgets/add_to_cart.dart';
+import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 import 'package:first/models/catalog.dart';
 import 'package:first/pages/detail_page.dart';
 import 'package:first/widgets/home_widgets/catalog_image.dart';
-import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class CatalogList extends StatelessWidget {
   const CatalogList({Key? key}) : super(key: key);
@@ -32,7 +34,7 @@ class CatalogItem extends StatelessWidget {
   const CatalogItem({
     Key? key,
     required this.catalog,
-  })  : super(key: key);
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return VxBox(
@@ -55,16 +57,9 @@ class CatalogItem extends StatelessWidget {
               buttonPadding: EdgeInsets.fromLTRB(0, 0, 16, 0),
               children: [
                 "\$${catalog.price}".text.bold.xl.make(),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: "Add To Cart".text.make(),
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Theme.of(context).cardColor),
-                      shape: MaterialStateProperty.all(StadiumBorder())),
-                )
+                AddToCart(catalog: catalog)
               ],
-            )
+            ),
           ],
         ))
       ],

@@ -6,7 +6,7 @@
       "desc": "Samsung 2022 Flagship Phone",
       "price": 1099,
       "color": "black",
-      "image": "https://static.toiimg.com/thumb/resizemode-4,msid-89473684,imgsize-200,width-1200/89473684.jpg"
+      "image": "https://fscl01.fonpit.de/devices/24/2224-w320h320.png"
     },
     {
       "id": 2,
@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "name": "Nvidia RTX 3090 Ti",
-      "desc": "Nvidia Top of the Line Graphics Card",
+      "name": "Aorus RTX 3090 Ti",
+      "desc": "Nvidia Top of the Line Graphics Card, built by Gigabyte",
       "price": 2999,
       "color": "black",
-      "image": "https://cdn.wccftech.com/wp-content/uploads/2022/03/Untitled-1.png"
+      "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/1656/innergigabyteimages/kf-img.png"
     },
     {
       "id": 4,

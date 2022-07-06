@@ -10,12 +10,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Page"),
+        backgroundColor: Colors.transparent,
       ),
       body: Center(
         child: Column(
           children: [
-            Image.asset('assets/images/img.jpg'),
+            Center(
+              child: Image.asset(
+                'assets/images/ShopKart.jpg',
+              ),
+            ),
             const Text(
               "Welcome to MyApp",
               style: TextStyle(fontSize: 20),

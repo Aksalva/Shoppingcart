@@ -12,16 +12,19 @@ class WlcmDrawer extends StatelessWidget {
         'https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png';
     return Drawer(
       child: Container(
-        color: Color(0xFFFFFFFF),
+        color: Theme.of(context).scaffoldBackgroundColor,
         child: ListView(
           children: [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                decoration: BoxDecoration(color: Color(0xFF191CD2)),
-                accountName: Text('Gorakh'),
-                accountEmail: Text('example@abc.com'),
+                decoration:
+                    BoxDecoration(color: Theme.of(context).selectedRowColor),
+                accountName: Text('Gorakh',
+                    style: TextStyle(color: Theme.of(context).primaryColor)),
+                accountEmail: Text('example@abc.com',
+                    style: TextStyle(color: Theme.of(context).primaryColor)),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(imgurl),
                 ),
