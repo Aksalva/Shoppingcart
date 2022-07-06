@@ -18,17 +18,16 @@ class HomePage extends StatelessWidget {
             Center(
               child: Image.asset(
                 'assets/images/ShopKart.jpg',
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
               ),
-            ),
-            const Text(
-              "Welcome to MyApp",
-              style: TextStyle(fontSize: 20),
             ),
           ],
         ),
       ),
       drawer: const HmpgDrawer(),
       floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.login_rounded),
         onPressed: () => {Navigator.pushNamed(context, MyRoutes.loginRoute)},
         backgroundColor: const Color(0xFF191CD2),
       ),
