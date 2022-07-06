@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         darkTheme: MyTheme.darkTheme(context),
         initialRoute: '/',
         routes: {
-          "/": (context) => HomePage(),
+          "/": (context) => WlcmPage(),
           MyRoutes.homeRoute: (context) => const HomePage(),
           MyRoutes.loginRoute: (context) => LoginPage(),
           MyRoutes.wlcmRoute: (context) => WlcmPage(),
