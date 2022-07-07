@@ -57,6 +57,11 @@ class HmpgDrawer extends StatelessWidget {
                 style: TextStyle(color: Theme.of(context).primaryColor),
               ),
             ),
+            Expanded(
+              child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text('ShopKart v0.0.1-alpha')),
+            ),
           ],
         ),
       ),

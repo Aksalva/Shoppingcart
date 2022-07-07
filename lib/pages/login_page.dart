@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
               "Login Page",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            backgroundColor: Colors.transparent,
+            backgroundColor: Theme.of(context).cardColor,
             leading: IconButton(
               onPressed: () => Navigator.pop(context),
               icon: Icon(CupertinoIcons.back),

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:first/core/store.dart';
 import 'package:first/models/cart.dart';
 import 'package:first/models/catalog.dart';

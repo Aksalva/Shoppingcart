@@ -8,29 +8,38 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var brightness = MediaQuery.of(context).platformBrightness;
+    bool darkModeOn = brightness == Brightness.dark;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            Center(
-              child: Image.asset(
-                'assets/images/ShopKart.jpg',
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-              ),
-            ),
-          ],
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
         ),
-      ),
-      drawer: const HmpgDrawer(),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.login_rounded),
-        onPressed: () => {Navigator.pushNamed(context, MyRoutes.loginRoute)},
-        backgroundColor: const Color(0xFF191CD2),
-      ),
-    );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Image.asset(
+                  (darkModeOn)
+                      ? 'assets/images/shopkart-dark.png'
+                      : 'assets/images/shopkart-light.png',
+                  fit: BoxFit.fitHeight,
+                  alignment: Alignment.center,
+                ),
+              ),
+            ],
+          ),
+        ),
+        drawer: const HmpgDrawer(),
+        floatingActionButton: ClipOval(
+          child: InkWell(
+            onLongPress: () {},
+            child: FloatingActionButton(
+              child: const Icon(Icons.login_rounded),
+              onPressed: () =>
+                  {Navigator.pushNamed(context, MyRoutes.loginRoute)},
+            ),
+          ),
+        ));
   }
 }

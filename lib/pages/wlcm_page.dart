@@ -2,6 +2,8 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'dart:convert';
+import 'package:first/core/store.dart';
+import 'package:first/models/cart.dart';
 import 'package:first/utils/routes.dart';
 import 'package:first/widgets/home_widgets/catalog_header.dart';
 import 'package:first/widgets/home_widgets/catalog_list.dart';
@@ -17,6 +19,8 @@ class WlcmPage extends StatefulWidget {
 }
 
 class _WlcmPageState extends State<WlcmPage> {
+  final url = "https://api.jsonbin.io/v3/b/62c654d04bccf21c2ed1ff8a";
+
   @override
   void initState() {
     super.initState();
@@ -27,6 +31,10 @@ class _WlcmPageState extends State<WlcmPage> {
     await Future.delayed(const Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
+
+    /*final response = await http.get(Uri.parse(url));
+    final catalogJson = response.body;*/
+
     var decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items =
@@ -36,14 +44,23 @@ class _WlcmPageState extends State<WlcmPage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => {Navigator.pushNamed(context, MyRoutes.cartRoute)},
-          backgroundColor: Theme.of(context).cardColor,
-          child: Icon(
-            CupertinoIcons.cart,
-            color: Colors.white,
-          ),
+        floatingActionButton: VxBuilder(
+          mutations: {AddMutation, RemoveMutation},
+          builder: (context, _, vxStatus) => FloatingActionButton(
+            onPressed: () => {Navigator.pushNamed(context, MyRoutes.cartRoute)},
+            backgroundColor: Theme.of(context).cardColor,
+            child: Icon(
+              CupertinoIcons.cart,
+              color: Colors.white,
+            ),
+          ).badge(
+              color: Colors.red,
+              size: 20,
+              count: _cart.items.length,
+              textStyle:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         ),
         body: SafeArea(
             child: Container(
