@@ -1,16 +1,20 @@
-# first
+# ShopKart
 
-A new Flutter project.
+It is a basic Catalog App built on Flutter. This app has system theme based theming, animations and great visuals.
+Currently it has dummy text as item details, but can be modified as reuqired.
 
-## Getting Started
+You can use this app as a refrence app and/or can tinker it as you like it. It will be updated periodically with optimised codes, features, etc.
 
-This project is a starting point for a Flutter application.
+# Pre-Requisites
 
-A few resources to get you started if this is your first Flutter project:
+Dart
+Flutter SDK
+Android Studio
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Getting Started
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To access and modify the codebase:
+You must have latest version of Dart, Flutter and Android Studio installed on your machine and pull the repository. This app can also run as a webapp and desktop/macOS app. But you must enable it in the IDE.
+
+To test the release:
+Download and install the apk on your Andorid device. Minimum Android v6.0 Marshmallow required and internet connection might be required.
